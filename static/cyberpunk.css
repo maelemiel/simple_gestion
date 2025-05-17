@@ -1,0 +1,8 @@
+/* cyberpunk.css : Style cyberpunk flashy */
+body { background: #0f1021; color: #f6019d; font-family: 'Orbitron', Arial, sans-serif; }
+h1 { color: #00f0ff; text-shadow: 0 0 8px #f6019d, 0 0 16px #00f0ff; }
+table { border-collapse: collapse; width: 100%; background: #1a1b41; box-shadow: 0 0 16px #f6019d44; }
+th, td { border: 1px solid #00f0ff; padding: 10px; }
+th { background: #f6019d; color: #0f1021; }
+button, input[type=submit] { background: #00f0ff; color: #0f1021; border: none; padding: 10px 20px; border-radius: 4px; font-weight: bold; box-shadow: 0 0 8px #f6019d; cursor: pointer; }
+button:hover, input[type=submit]:hover { background: #f6019d; color: #fff; }

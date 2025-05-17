@@ -1,0 +1,8 @@
+/* royal.css : Style royal luxueux */
+body { background: #f5f3e7; color: #3b2f2f; font-family: 'Georgia', serif; }
+h1 { color: #bfa14a; text-shadow: 1px 1px 0 #fff; letter-spacing: 2px; }
+table { border-collapse: collapse; width: 100%; background: #fffbe7; border: 2px solid #bfa14a; }
+th, td { border: 1px solid #bfa14a; padding: 12px; }
+th { background: #bfa14a; color: #fffbe7; font-weight: bold; }
+button, input[type=submit] { background: #bfa14a; color: #fffbe7; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer; box-shadow: 0 2px 8px #bfa14a44; }
+button:hover, input[type=submit]:hover { background: #7c6721; color: #fff; }

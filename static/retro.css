@@ -1,0 +1,8 @@
+/* retro.css : Style rétro années 80 */
+body { background: #fffbe7; color: #2d1e2f; font-family: 'Courier New', Courier, monospace; }
+h1 { color: #e63946; text-shadow: 2px 2px 0 #f1faee; }
+table { border: 2px solid #e63946; background: #f1faee; }
+th, td { border: 1px solid #e63946; padding: 8px; }
+th { background: #e63946; color: #f1faee; }
+button, input[type=submit] { background: #f1faee; color: #e63946; border: 2px solid #e63946; padding: 8px 16px; font-family: inherit; cursor: pointer; }
+button:hover, input[type=submit]:hover { background: #e63946; color: #fffbe7; }

@@ -1,0 +1,8 @@
+/* style3.css : Sombre élégant */
+body { background: #18181b; color: #f4f4f5; font-family: 'Segoe UI', Arial, sans-serif; }
+h1 { color: #fbbf24; }
+table { border-collapse: collapse; width: 100%; background: #23232a; }
+th, td { border: 1px solid #fbbf24; padding: 8px; }
+th { background: #fbbf24; color: #23232a; }
+button, input[type=submit] { background: #fbbf24; color: #23232a; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
+button:hover, input[type=submit]:hover { background: #b45309; color: #fff; }

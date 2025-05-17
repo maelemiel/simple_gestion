@@ -1,0 +1,8 @@
+/* neo.css : Style néo minimaliste */
+body { background: #f8fafc; color: #222; font-family: 'Montserrat', Arial, sans-serif; }
+h1 { color: #0ea5e9; letter-spacing: 2px; }
+table { border-radius: 12px; box-shadow: 0 2px 8px #0ea5e933; background: #fff; }
+th, td { border: none; padding: 12px 16px; }
+th { background: #e0f2fe; color: #0ea5e9; font-weight: 700; }
+button, input[type=submit] { background: #0ea5e9; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; box-shadow: 0 2px 4px #0ea5e933; }
+button:hover, input[type=submit]:hover { background: #0369a1; }

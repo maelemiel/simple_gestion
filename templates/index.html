@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gestion de Projets</title>
+  {% if style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename=style + '.css') }}">
+  {% endif %}
+</head>
+<body>
+  <div style="margin-bottom: 1em;">
+    <b>Style :</b>
+    <a href="{{ url_for('set_style', style='nostyle') }}"><button type="button">Sans style</button></a>
+    <a href="{{ url_for('set_style', style='style1') }}"><button type="button">Bleu moderne</button></a>
+    <a href="{{ url_for('set_style', style='style2') }}"><button type="button">Vert doux</button></a>
+    <a href="{{ url_for('set_style', style='style3') }}"><button type="button">Sombre élégant</button></a>
+    <a href="{{ url_for('set_style', style='neo') }}"><button type="button">Néo</button></a>
+    <a href="{{ url_for('set_style', style='retro') }}"><button type="button">Rétro</button></a>
+    <a href="{{ url_for('set_style', style='cyberpunk') }}"><button type="button">Cyberpunk</button></a>
+    <a href="{{ url_for('set_style', style='futuriste') }}"><button type="button">Futuriste</button></a>
+    <a href="{{ url_for('set_style', style='royal') }}"><button type="button">Royal</button></a>
+  </div>
+
+  <h1>Mes Projets et Tâches</h1>
+
+  <!-- Liste des tâches -->
+  <table border="1">
+    <tr>
+      <th>Projet</th>
+      <th>Tâche</th>
+      <th>Statut</th>
+      <th>Date Limite</th>
+      <th>Actions</th>
+    </tr>
+    {% for tache in taches %}
+    <tr>
+      <td>{{ tache.projet }}</td>
+      <td>{{ tache.description }}</td>
+      <td>{{ tache.statut }}</td>
+      <td>{{ tache.date_limite }}</td>
+      <td>
+        {% if tache.statut != "Terminé" %}
+          <a href="{{ url_for('tache.modifier_statut', id=tache.id, statut='Terminé') }}">✔ Terminé</a>
+        {% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <!-- Formulaire pour ajouter une tâche -->
+  <h2>Ajouter une Tâche</h2>
+  <form action="{{ url_for('tache.ajouter_tache') }}" method="post">
+    <select name="projet_id">
+      {% for projet in projets %}
+        <option value="{{ projet.id }}">{{ projet.nom }}</option>
+      {% endfor %}
+    </select>
+    <input type="text" name="description" placeholder="Description de la tâche" required>
+    <select name="statut">
+      <option value="À faire">À faire</option>
+      <option value="En cours">En cours</option>
+      <option value="Terminé">Terminé</option>
+    </select>
+    <input type="date" name="date_limite">
+    <button type="submit">Ajouter</button>
+  </form>
+
+  <!-- Formulaire pour ajouter un projet -->
+  <h2>Ajouter un Projet</h2>
+  <form action="{{ url_for('projet.ajouter_projet') }}" method="post">
+    <input type="text" name="nom" placeholder="Nom du projet" required>
+    <button type="submit">Ajouter</button>
+  </form>
+</body>
+</html>
